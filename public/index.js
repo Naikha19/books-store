@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch books from the API and display them
     function fetchBooks() {
-        fetch('http://localhost:3000/books')
+        fetch('http://localhost:3001/books')
             .then(response => response.json())
             .then(data => {
                 booksList.innerHTML = '';  // Clear the list first
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const author = authorInput.value.trim();
 
         if (title && author) {
-            fetch('http://localhost:3000/books', {
+            fetch('http://localhost:3001/books', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handle deleting a book
     window.deleteBook = function(id) {
-        fetch(`http://localhost:3000/books/${id}`, {
+        fetch(`http://localhost:3001/books/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
