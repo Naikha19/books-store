@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch books from the API and display them
     function fetchBooks() {
-        fetch('https://books-store-g58s.onrender.com')
+        fetch('https://books-store-g58s.onrender.com/books')
             .then(response => response.json())
             .then(data => {
                 booksList.innerHTML = '';  // Clear the list first
